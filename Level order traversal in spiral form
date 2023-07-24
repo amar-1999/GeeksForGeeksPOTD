@@ -129,3 +129,78 @@ return result;
     }
 
 }
+
+Python Solution:
+
+#Function to return a list containing the level order traversal in spiral form.
+def findSpiral(root):
+result = []
+if not root:
+return result
+
+    h = 0
+    queue = [root]
+    stack = []
+
+    while queue:
+        level_size = len(queue)
+        while level_size > 0:
+            node = queue.pop(0)
+
+            if h % 2 != 0 and h != 0:
+                result.append(node.val)
+            else:
+                stack.append(node.val)
+
+            if node.left:
+                queue.append(node.left)
+            if node.right:
+                queue.append(node.right)
+
+            level_size -= 1
+
+        while stack:
+            result.append(stack.pop())
+
+        h += 1
+
+    return result
+
+Javascript Solution:
+
+//Function to return a list containing the level order traversal in spiral form.
+const findSpiral = (root) => {
+const result = [];
+if (!root) return result;
+
+let h = 0;
+const queue = [root];
+const stack = [];
+
+while (queue.length > 0) {
+const levelSize = queue.length;
+while (levelSize > 0) {
+const node = queue.shift();
+
+      if (h % 2 !== 0 && h !== 0) {
+        result.push(node.val);
+      } else {
+        stack.push(node.val);
+      }
+
+      if (node.left) queue.push(node.left);
+      if (node.right) queue.push(node.right);
+
+      levelSize--;
+    }
+
+    while (stack.length > 0) {
+      result.push(stack.pop());
+    }
+
+    h++;
+
+}
+
+return result;
+};
