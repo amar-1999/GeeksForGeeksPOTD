@@ -53,4 +53,4 @@ Expected Auxiliary Space: O(Height of the BST).
 
 ### Constraints:
 
-1 <= N <= 104
+1 <= N <= 10^4
