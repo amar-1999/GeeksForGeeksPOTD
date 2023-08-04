@@ -1,4 +1,4 @@
-# Level order traversal in spiral form
+# Kth Ancestor in a Tree
 
 Given a binary tree of size N, a node, and a positive integer k.,
 Your task is to complete the function kthAncestor(),

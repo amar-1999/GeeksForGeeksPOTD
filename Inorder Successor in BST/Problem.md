@@ -1,4 +1,4 @@
-# Median of BST
+# Inorder Successor in BST
 
 Given a BST, and a reference to a Node x in the BST. Find the Inorder Successor of the given node in the BST.
 
